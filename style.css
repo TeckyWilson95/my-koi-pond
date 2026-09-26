@@ -1,0 +1,93 @@
+/* One stylesheet for both pages. No fonts, frameworks or trackers to load:
+   the site exists to be read, and to be somewhere Google can point at. */
+
+:root {
+  --ink: #2c1810;
+  --ink-soft: #6b5545;
+  --paper: #fff8f3;
+  --card: #ffffff;
+  --accent: #ff6b35;
+  --edge: rgba(44, 24, 16, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f5ece5;
+    --ink-soft: #b9a79a;
+    --paper: #231510;
+    --card: #2f1f18;
+    --accent: #ff8a5c;
+    --edge: rgba(0, 0, 0, 0.4);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 16px 64px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main { max-width: 42rem; margin: 0 auto; }
+
+header {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 56px 0 8px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 36px 0 8px;
+}
+
+p, li { color: var(--ink); }
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 24px 0;
+  box-shadow: 0 2px 10px var(--edge);
+}
+
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+
+a { color: var(--accent); }
+
+.meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+nav {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 16px 0 0;
+  font-size: 0.95rem;
+}
+
+footer {
+  max-width: 42rem;
+  margin: 48px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--edge);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
